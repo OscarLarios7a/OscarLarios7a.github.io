@@ -77,10 +77,11 @@
 	--color5: rgba(129, 132, 140,.981); ;
 	--fondo:#f2f2f2 ;
 	--titulos: 33px;
+	/*Seccion mia*/
 	--subtitulos: 18px;
 	--margenes: 60px ;
 	--espacios: 10px;
-	--espacios-contenido:45px ;
+	--espacios-contenido:45px;
 }
 *{
 	margin: 0;
@@ -95,6 +96,21 @@ img{
 
 }
 /*SECCION  DE PRECARGA*/
+/*.hidden{
+  overflow: hidden;
+}
+
+.centrado{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+*/
 .lds-facebook {
   display: inline-block;
   position: relative;
@@ -151,11 +167,11 @@ header{
 		background-size: cover;
 }
 
-.nav{
+nav{
 	width: 100%;
 	position: fixed;
 	color: #fff;
-	box-shadow: 0 0 20px 0 var(--color1);
+	box-shadow: 0 0 10px 0 var(--color1);
 }
 .nav1{
 	background: transparent;
@@ -179,7 +195,7 @@ header{
 }
 nav .enlaces a{
 	display: inline-block;
-	padding: 5px;
+	padding: 5px 0;
 	margin-right: 17px;
 	font-size: 17px;
 	font-weight: 300;
@@ -194,10 +210,11 @@ nav .enlaces a:hover{
 	transition: .6s;
 }
 .logo, .logo img{
-	width:80px;
 	height: 80px;
+	/*Seccion mia*/
+	width:80px;
 	border-radius:400px;
-    text-align: center;
+  text-align: center;
 }
 .icono{
 	display: none;
@@ -218,13 +235,15 @@ nav .enlaces a:hover{
 }
 
 .textos>h1{
-	font-size: 100px;
+	font-size: 80px;
+	/*Seccion mia*/
 	font-family: BifocalsFontRegular;
 	letter-spacing: 5px;
 }
 .textos>h2{
 	font-size: 30px;
 	font-weight: 300;
+	/*Seccion mia*/
 	font-family: BifocalsFontRegular;
 	letter-spacing: 5px;
 }
@@ -288,7 +307,7 @@ nav .enlaces a:hover{
 	width: 100%;
 	padding: var(--espacios) 0;
 }
-.texto-team>h4{
+.texto-team>h4{ 
 		margin-top: 7px;
 		font-size: 16px;
 		font-weight: 200;
@@ -328,9 +347,67 @@ nav .enlaces a:hover{
 }
 .caja-servicios>h4{
 		margin-bottom: var(--espacios);
+		font-family: BifocalsFontRegular;
 }
 .caja-servicios>p{
 	text-align: center;
+}
+
+.caja-servicios img {
+	margin: 0 0 10px 0;
+}
+.botones-work{
+	overflow:hidden;
+	padding:20px; 
+}
+.botones-work li{
+	font-family: BifocalsFontRegular;
+	display: inline-block;
+	text-align: center;
+	margin-left: var(--espacios-contenido);
+	padding:6px 12px;
+	border:1px solid var(--color4); 
+	list-style: none;
+	color:var(--color4);
+}
+.botones-work li:hover{
+	background: var(--color5);
+	color: #fff;
+	cursor: pointer;
+}
+.botones-work .active{
+	background: var(--color4);
+	color: #fff;
+}
+.galeria-work{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.galeria-work .cont-work{
+	width: 30%;
+	border-block: 0 0 6px rgba(89, 43, 43, .5);
+	height: 300px;
+	overflow: hidden;
+	margin-bottom: var(--espacios-contenido);
+}
+.img-work{
+	height: 90%;
+	width: 100%;
+}
+.img-work img{
+	height: 100%;
+	width: 100%;
+	box-shadow: 0 0 20px 0 var(--color5);
+}
+.textos-work{
+	height: 10%;
+}
+.textos-work h4{
+	line-height: 30px;
+	color: var(--color5);
+	font-family: BifocalsFontRegular;
+	font-weight:300px;
 }
 /*section .contenedor{
 	/*background-color: #dd4f2a;
@@ -338,7 +415,31 @@ nav .enlaces a:hover{
 }*/
 
 /*Seccion FOOTER */
-span i{
-	font-size: 40px;
-
+footer{
+	background: url(../img/teclado.jpg);
 }
+footer p{
+	margin-top: var(--espacios);
+}
+.marca-logo{
+	width: 40%;
+	margin: auto;
+	margin-bottom: var(--espacios);
+}
+.margin-logo img{
+	width: 100%;
+}
+.iconos{
+	display:flex;
+	margin: auto;
+	justify-content: space-around;
+	width: 100%;
+}
+.fab{
+	font-size: 60px;
+	color: var(--color3);
+	margin-bottom: var(--espacios);
+	display: inline-block;
+}
+
+
