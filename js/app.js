@@ -35,33 +35,15 @@ function nav_responsive(){
     }
 }
 
-
 /** Declaraciones de Eventos **/
 //declaracion de un evento Load
 window.addEventListener('load',function(){
     $('#onload').fadeOut();
     $('body').removeClass('hidden');
-menus();
-});
-//declaracion de un evento Scroll 
-window.addEventListener('scroll',function(){
-    console.log(window.pageYOffset);
     menus();
 });
-//declaracion de un evento click nav
-window.addEventListener('click',function(){
-    nav_responsive();
-});
-//declaracion de un evento Reajuste Pantalla
-window.addEventListener('resize',function(){
-    if(screen.width>=700){
-        cerrado=true;
-        menu.style.removeProperty('overflow');
-        menu.style.removeProperty('hidden');
-    }
-});
 //declaracion de un click 
-window.addEventListener('click',function(){
+window.addEventListener('click',function(e){
     console.log(e.target);
     if(cerrado==false){
         let span=document.querySelector('span');
@@ -72,3 +54,21 @@ window.addEventListener('click',function(){
         }
     }
 });
+//declaracion de un evento Scroll 
+window.addEventListener('scroll',function(){
+    console.log(window.pageYOffset);
+    menus();
+});
+//declaracion de un evento Reajuste Pantalla
+window.addEventListener('resize',function(){
+    if(screen.width>=700){
+        cerrado=true;
+        menu.style.removeProperty('overflow');
+        menu.style.removeProperty('width');
+    }
+});
+//declaracion de un evento click nav
+abrir.addEventListener('click',function(){
+    nav_responsive();
+});
+
